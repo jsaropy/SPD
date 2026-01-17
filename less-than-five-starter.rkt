@@ -9,16 +9,16 @@
 ; of the stub and template.
 
 
-; String -> Integer
+; String -> Boolean
 ; given an string determine the length of this string is less than 5 (true)
-(check-expect (lessthanfive "cat") true)
-(check-expect (lessthanfive "banana") false)
-(check-expect (lessthanfive "hello") false)
+(check-expect (lessthanfive? "cat") true)
+(check-expect (lessthanfive? "banana") false)
+(check-expect (lessthanfive? "hello") false)
 
-;(define (lessthanfive str) false) ;stub
+;(define (lessthanfive? str) false) ;stub
 
-;(define (lessthanfive str)
+;(define (lessthanfive? str)
 ;  (... str)) ;template
 
-(define (lessthanfive str)
+(define (lessthanfive? str)
   (< (string-length str) 5))
